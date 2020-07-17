@@ -1,24 +1,23 @@
 package cn.willingxyz.restdoc.swagger3;
 
-import cn.willingxyz.restdoc.core.parse.utils.EnumSerializer;
+import cn.willingxyz.restdoc.core.models.*;
+import cn.willingxyz.restdoc.core.parse.IRestDocGenerator;
 import cn.willingxyz.restdoc.core.parse.utils.FormatUtils;
 import cn.willingxyz.restdoc.core.parse.utils.ReflectUtils;
 import cn.willingxyz.restdoc.core.parse.utils.TextUtils;
 import cn.willingxyz.restdoc.swagger.common.utils.ClassNameUtils;
 import cn.willingxyz.restdoc.swagger.common.utils.JsonUtils;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.github.therapi.runtimejavadoc.RuntimeJavadoc;
-import cn.willingxyz.restdoc.core.models.*;
-import cn.willingxyz.restdoc.core.parse.IRestDocGenerator;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem;
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.media.*;
+import io.swagger.v3.oas.models.media.ArraySchema;
+import io.swagger.v3.oas.models.media.Content;
+import io.swagger.v3.oas.models.media.MediaType;
+import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 import io.swagger.v3.oas.models.parameters.RequestBody;
 import io.swagger.v3.oas.models.responses.ApiResponse;
@@ -28,7 +27,10 @@ import io.swagger.v3.oas.models.tags.Tag;
 import lombok.var;
 
 import java.lang.reflect.Type;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static cn.willingxyz.restdoc.swagger.common.utils.StringUtils.combineStr;

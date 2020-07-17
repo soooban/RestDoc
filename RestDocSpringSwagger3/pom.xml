@@ -6,7 +6,7 @@
         <artifactId>restdoc</artifactId>
         <groupId>cn.willingxyz.restdoc</groupId>
         <!--ignore version-->
-        <version>0.2.1.4</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -20,13 +20,12 @@
             <artifactId>RestDocSwagger3</artifactId>
         </dependency>
         <dependency>
-            <groupId>cn.willingxyz.restdoc</groupId>
-            <artifactId>RestDocSpring</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <scope>provided</scope>
+            <groupId>cn.willingxyz.restdoc</groupId>
+            <artifactId>RestDocSpring</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
