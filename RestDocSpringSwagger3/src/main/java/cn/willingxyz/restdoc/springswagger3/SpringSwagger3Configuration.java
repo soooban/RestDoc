@@ -76,6 +76,12 @@ public class SpringSwagger3Configuration {
         return new RestDocParser(parseConfig);
     }
 
+    @Bean
+    RestDocConfigSwagger3Ext restDocConfigSwagger3Ext() {
+        return RestDocConfigSwagger3Ext.builder()
+            .build();
+    }
+
     private List<SwaggerGeneratorConfig.ServerInfo> convertServers(List<RestDocConfig.Server> servers) {
         if (servers == null || servers.size() <= 0) {
             return Collections.singletonList(SwaggerGeneratorConfig.ServerInfo.builder().description("server").url("/").build());
