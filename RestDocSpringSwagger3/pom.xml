@@ -12,7 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>RestDocSpringSwagger3</artifactId>
-    <version>${parent.version}</version>
+<!--    <version>${project.parent.version}</version>-->
 
     <dependencies>
         <dependency>
@@ -26,6 +26,10 @@
         <dependency>
             <groupId>cn.willingxyz.restdoc</groupId>
             <artifactId>RestDocSpring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

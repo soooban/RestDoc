@@ -12,7 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>RestDocSwagger3</artifactId>
-    <version>${parent.version}</version>
+<!--    <version>${project.parent.version}</version>-->
 
     <dependencies>
         <dependency>
@@ -29,6 +29,4 @@
         </dependency>
 
     </dependencies>
-
-
 </project>
