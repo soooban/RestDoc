@@ -26,7 +26,7 @@ public class SpringSwagger3Controller {
         _uiConfiguration = uiConfiguration;
     }
 
-    @CrossOrigin
+    @CrossOrigin("*")
     @GetMapping(value = {"/swagger.json"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String swaggerJson()
     {
