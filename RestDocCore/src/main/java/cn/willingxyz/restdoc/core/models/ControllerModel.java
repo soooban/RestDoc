@@ -12,6 +12,7 @@ import java.util.List;
 public class ControllerModel {
     private Class _controllerClass;
     private String _description;
+    private String _tag;
 
     private List<PathModel> _controllerMethods = new ArrayList<>();
 }

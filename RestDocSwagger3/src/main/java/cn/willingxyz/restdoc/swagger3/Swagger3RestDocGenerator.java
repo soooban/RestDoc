@@ -7,6 +7,7 @@ import cn.willingxyz.restdoc.core.parse.utils.ReflectUtils;
 import cn.willingxyz.restdoc.core.parse.utils.TextUtils;
 import cn.willingxyz.restdoc.swagger.common.utils.ClassNameUtils;
 import cn.willingxyz.restdoc.swagger.common.utils.JsonUtils;
+import cn.willingxyz.restdoc.swagger.common.utils.StringUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.therapi.runtimejavadoc.RuntimeJavadoc;
 import io.swagger.v3.oas.models.Components;
@@ -397,6 +398,8 @@ public class Swagger3RestDocGenerator implements IRestDocGenerator {
     }
 
     private String getTagName(ControllerModel controller) {
-        return _config.getTypeNameParser().parse(controller.getControllerClass());
+
+        return org.springframework.util.StringUtils.isEmpty(controller.getTag()) ?
+            _config.getTypeNameParser().parse(controller.getControllerClass()) : controller.getTag();
     }
 }
